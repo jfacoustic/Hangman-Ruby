@@ -27,8 +27,13 @@ describe Guesser do
         expect(temp.guess("a")).to eql(false)
       end
     end
+    context "input in word" do
+      it "returns true" do
+        temp = Guesser.new({word: "pie"})
+        expect(temp.guess("i")).to eql(true)
+      end
+    end
   end
-
   describe ".word" do
     context "default case" do
       it "returns word" do

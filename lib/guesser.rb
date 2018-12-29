@@ -10,8 +10,11 @@ class Guesser
     elsif !(letter.match /[a-zA-Z]/)
       return "error"
     else
-      return false
+      if word.include? letter
+        return true
+      else
+        return false
+      end
     end
   end
-
 end
