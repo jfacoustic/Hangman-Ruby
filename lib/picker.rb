@@ -6,6 +6,8 @@ class Picker
   def pick
     if !dictionary
       return "error"
+    else
+      return dictionary[Random.rand(dictionary.length)]
     end
   end
 end

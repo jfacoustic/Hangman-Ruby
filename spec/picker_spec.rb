@@ -7,5 +7,12 @@ describe Picker do
         expect(temp.pick).to eql("error")
       end
     end
+    context 'dictionary exists' do
+      it "returns a word from the dictionary" do
+        dictionary = ["abc", "cat", "dog"]
+        temp = Picker.new({dictionary: dictionary})
+        expect(dictionary).to include(temp.pick)
+      end
+    end
   end
 end
