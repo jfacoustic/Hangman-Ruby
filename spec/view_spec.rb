@@ -1,12 +1,19 @@
 require 'view'
-board1 = "______\n|\n|\n|\n|\n"
 
 describe View do
   describe ".current" do
-    context "no mistakes" do
-      it "displays empty gallows" do
-        print(board1)
-        expect(View.current).to eql(board1)
+    context "default" do
+      it "should be zero" do
+        temp = View.new({})
+        expect(temp.current).to eql(0)
+      end
+    end
+  end
+  describe ".img_dir" do
+    context "default" do
+      it "should be '../resources/'" do
+        temp = View.new({})
+        expect(temp.img_dir).to eql('../resources/')
       end
     end
   end
