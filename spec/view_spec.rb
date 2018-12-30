@@ -26,9 +26,9 @@ describe View do
     end
   end
   describe ".getImg" do
-    (0..6).each do |x|
-      context "default" do
-        it "gets #{x}" do
+    (0..7).each do |x|
+      context "x is #{x}" do
+        it "get image #{x}, case 7 is win" do
           temp = View.new({})
           expect(temp.getImg(x)).to eql(thisImg(x))
         end
